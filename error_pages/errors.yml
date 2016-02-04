@@ -1,0 +1,45 @@
+# Descriptions taken from https://httpstatuses.com/
+400:
+  title: Bad Request
+  description: 
+    |
+      The server cannot or will not process the request due to something that is perceived
+      to be a client error (e.g., malformed request syntax, invalid request message framing,
+      or deceptive request routing).
+
+403:
+  title: Forbidden
+  description: 
+    |
+      The server understood the request but refuses to authorize it.
+
+408:
+  title: Request Timeout
+  description: 
+    |
+      The server did not receive a complete request message within the time that it was
+      prepared to wait.
+500:
+  title: Internal Server Error
+  description: 
+    |
+      The server encountered an unexpected condition that prevented it from fulfilling the
+      request.
+502:
+  title: Bad Gateway
+  description: 
+    |
+      The server, while acting as a gateway or proxy, received an invalid response from an
+      inbound server it accessed while attempting to fulfill the request.
+503:
+  title: Service Unavailable
+  description: 
+    |
+      The server is currently unable to handle the request due to a temporary overload or
+      scheduled maintenance, which will likely be alleviated after some delay.
+504:
+  title: Gateway Timeout
+  description: 
+    |
+      The server, while acting as a gateway or proxy, did not receive a timely response from
+      an upstream server it needed to access in order to complete the request.

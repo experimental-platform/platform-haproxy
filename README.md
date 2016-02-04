@@ -19,3 +19,10 @@ All development branches stem from and (re-)integrate here.
 [![Build Status](https://travis-ci.org/experimental-platform/platform-haproxy.svg?branch=master)](https://travis-ci.org/experimental-platform/platform-haproxy)
 
 This is the base for α-channel releases.
+
+## Error Pages
+
+The static error pages for HAProxy are added from the `error_pages/html` directory. These are generated using the Ruby script in `error_pages` and the
+error definitions in `error_pages/errors.yml`. The script has no dependencies apart from the Ruby standard library which should always be just available.
+
+You can re-build the static error pages by running `ruby error_pages/build.rb` and committing the result if you have ruby installed on your system.

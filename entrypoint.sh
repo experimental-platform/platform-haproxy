@@ -6,4 +6,4 @@ echo "======================================================="
 echo "Added host 'dockerhost' at $dockerhost to /etc/hosts"
 echo "======================================================="
 
-haproxy -f /usr/local/etc/haproxy/haproxy.cfg -d
+haproxy -f /etc/haproxy/haproxy.cfg -d
