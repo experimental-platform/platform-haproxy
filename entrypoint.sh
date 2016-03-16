@@ -17,6 +17,10 @@ else
   openssl x509 -req -days 3 -in /data/ssl/csr -signkey /data/ssl/key -out /data/ssl/cert
 fi
 
+# Create the pem file for self-signed local https connections
+# See https://serversforhackers.com/using-ssl-certificates-with-haproxy
+cat /data/ssl/cert /data/ssl/key > /data/ssl/pem
+
 dockerhost=$(netstat -nr | grep '^0\.0\.0\.0' | awk '{print $2}')
 echo "$dockerhost    dockerhost" >> /etc/hosts
 echo "======================================================="
