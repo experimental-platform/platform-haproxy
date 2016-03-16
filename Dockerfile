@@ -2,6 +2,7 @@ FROM haproxy:1.6
 
 RUN apt-get update && apt-get install -y net-tools openssl && \
     rm -rf /var/lib/apt/lists/* && \
+    addgroup haproxy --gid 600 && \
     adduser haproxy --gecos "" --disabled-password --uid 600 --gid 600 && \
     mkdir -p /run/haproxy && \
     chown -R haproxy:haproxy /run/haproxy && \
