@@ -14,7 +14,7 @@ else
   echo "Generating new self-signed SSL certificate"
   echo "======================================================="
   openssl req -nodes -newkey rsa:2048 -keyout /data/ssl/key -out /data/ssl/csr -subj "/C=US/ST=NJ/L=Monroe/O=MyCompany/OU=IT/CN=protonet.local"
-  openssl x509 -req -days 3 -in /data/ssl/csr -signkey /data/ssl/key -out /data/ssl/cert
+  openssl x509 -req -days 365 -in /data/ssl/csr -signkey /data/ssl/key -out /data/ssl/cert
 fi
 
 # Create the pem file for self-signed local https connections
