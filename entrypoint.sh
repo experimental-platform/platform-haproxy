@@ -4,7 +4,7 @@ set -e
 
 # If the certificate does not exist or expires within 86400*30 == 1 month from now,
 # generate a fresh one, otherwise keep the existing
-if [ openssl x509 -checkend 2592000 -noout -in /data/ssl/cert ]
+if openssl x509 -checkend 2592000 -noout -in /data/ssl/cert
 then
   echo "======================================================="
   echo "Self-signed local SSL certificate is valid"
