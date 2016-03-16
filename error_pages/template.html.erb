@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= code %> - <%= title %></title>
+  <title><% if code.to_s =~ /^[\d]+$/ %><%= code %> - <% end %><%= title %></title>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1, userscalable=no" name="viewport">
   <style type="text/css">
