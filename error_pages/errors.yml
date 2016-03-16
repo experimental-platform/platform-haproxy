@@ -43,3 +43,10 @@
     |
       The server, while acting as a gateway or proxy, did not receive a timely response from
       an upstream server it needed to access in order to complete the request.
+
+maintenance:
+  title: Site is undergoing maintenance
+  description:
+    |
+      The server you are trying to reach is currently undergoing maintenance. Please try again
+      in a few minutes.
