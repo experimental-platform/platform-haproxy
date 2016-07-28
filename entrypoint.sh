@@ -2,6 +2,12 @@
 
 set -e
 
+# Set a default for GITLAB_PUBLIC_IP if it is not set ir is empty
+if [ -z "$GITLAB_PUBLIC_IP" ]
+then
+  export GITLAB_PUBLIC_IP="gitlab-ip-not-set"
+fi
+
 # If the certificate does not exist or expires within 86400*30 == 1 month from now,
 # generate a fresh one, otherwise keep the existing
 if openssl x509 -checkend 2592000 -noout -in /data/ssl/cert
